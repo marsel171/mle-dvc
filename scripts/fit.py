@@ -33,7 +33,7 @@ def fit_model():
         ('cat', OneHotEncoder(), other_cat_features.columns.tolist()),
         ('num', StandardScaler(), num_features.columns.tolist())
         ],
-        remainder='drop',
+        remainder=params['remainder'],
         verbose_feature_names_out=False
     )
 
