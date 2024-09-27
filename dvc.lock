@@ -28,8 +28,8 @@ stages:
       size: 822095
     - path: scripts/fit.py
       hash: md5
-      md5: 06e515cf9ca8e86d333e618b52b42243
-      size: 1949
+      md5: 37a23f16a6d4f288bf82cb53032ef976
+      size: 1951
     params:
       params.yaml:
         auto_class_weights: Balanced
@@ -43,6 +43,10 @@ stages:
       hash: md5
       md5: aaaec01f27fa30c8d5a2a06ccb4d39aa
       size: 11582
+      cloud:
+        my_storage:
+          etag: aaaec01f27fa30c8d5a2a06ccb4d39aa
+          version_id: 00062317728CAE7B
   evaluate_model:
     cmd: python scripts/evaluate.py
     deps:
@@ -68,3 +72,7 @@ stages:
       hash: md5
       md5: b5c3a175a50c9ad0a9bf500fa8d4d222
       size: 77
+      cloud:
+        my_storage:
+          etag: b5c3a175a50c9ad0a9bf500fa8d4d222
+          version_id: 00062317728C6700
