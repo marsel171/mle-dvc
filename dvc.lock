@@ -28,15 +28,17 @@ stages:
       size: 822095
     - path: scripts/fit.py
       hash: md5
-      md5: 71da1e14031de3689a898e05b2e85363
-      size: 1882
+      md5: 70fbf230c8e758c0875d1da46d4419ff
+      size: 1913
     params:
       params.yaml:
         C: 1
         index_col: customer_id
         one_hot_drop: if_binary
         penalty: l2
+        remainder: drop
         target_col: target
+        verbose_feature_names_out: false
     outs:
     - path: models/fitted_model.pkl
       hash: md5

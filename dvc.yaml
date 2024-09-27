@@ -19,6 +19,8 @@ stages:
       - one_hot_drop
       - C
       - penalty
+      - remainder
+      - verbose_feature_names_out
     outs:
       - models/fitted_model.pkl
   evaluate_model:

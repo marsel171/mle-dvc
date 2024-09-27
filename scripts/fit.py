@@ -34,7 +34,7 @@ def fit_model():
         ('num', StandardScaler(), num_features.columns.tolist())
         ],
         remainder=params['remainder'],
-        verbose_feature_names_out=False
+        verbose_feature_names_out=params['verbose_feature_names_out'],
     )
 
     # model = CatBoostClassifier(auto_class_weights=params['auto_class_weights'])
