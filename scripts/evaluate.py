@@ -7,6 +7,9 @@ import json
 import yaml
 import os
 
+import sklearn
+print(sklearn.__version__)
+
 # оценка качества модели
 def evaluate_model():
 
@@ -18,7 +21,7 @@ def evaluate_model():
     with open('params.yaml', 'r') as fd:
         params = yaml.safe_load(fd)
 
-    data = pd.read_csv('data/initial_data.csv')
+    data = pd.read_csv('data/initial_data_2.csv')
 
     with open('models/fitted_model.pkl', 'rb') as fd:
         pipeline = joblib.load(fd)
@@ -34,6 +37,7 @@ def evaluate_model():
         )
     for key, value in cv_res.items():
         cv_res[key] = round(value.mean(), 3)
+
 
     os.makedirs('cv_results', exist_ok=True)
     with open('cv_results/cv_res.json', 'w') as fd:

@@ -17,7 +17,7 @@ def fit_model():
     with open('params.yaml', 'r') as fd:
         params = yaml.safe_load(fd)
 
-    data = pd.read_csv('data/initial_data.csv')
+    data = pd.read_csv('data/initial_data_2.csv')
 
     cat_features = data.select_dtypes(include='object')
     potential_binary_features = cat_features.nunique() == 2
